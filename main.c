@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 char	*find_matching_bracket(char *code);
 
@@ -74,9 +75,8 @@ int		main(int argc, char **argv)
 		printf("Give one argument as code\n");
 		return (0);
 	}
-	array = malloc(sizeof(char) * 1024);
-	for (int i = 0; i < 1024; i++)
-		array[i] = 0;
+	array = malloc(sizeof(char) * 30000);
+	memset(array, 0, sizeof(array));
 	brainfuck(argv[1], array);
 	return (0);
 }
