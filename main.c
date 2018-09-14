@@ -25,7 +25,9 @@ void	brainfuck(char *command, char *array)
 		else if (*command == ']' && *pointer != 0)
 			command = find_matching_bracket(command);
 		else if (*command == '.')
-			printf("%c", *pointer);
+			putchar(*pointer);
+		else if (*command == ',')
+			*pointer = getchar();
 		command++;
 	}
 }
