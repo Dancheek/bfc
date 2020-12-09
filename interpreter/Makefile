@@ -1,4 +1,4 @@
 all:
-	gcc main.c -o bfc
+	g++ main.cpp -g -o bfi
 clean:
-	rm -rf bfc
+	rm -rf bfi
